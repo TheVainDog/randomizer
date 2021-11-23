@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="./functions.js"></script> 
+    <title>Posada 2021!</title>
+  </head>
+  <body>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div class="container">
+        <div class="row gx-1 justify-content-center p-5">
+            <h1>¡Posada 2021!</h1>
+        </div>
+        
+        <div class="row gx-1 justify-content-center p-3">
+      
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_01" class="form-control bg-primary text-white" style="text-align: center;" value="01" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_02" class="form-control bg-primary text-white" style="text-align: center;" value="02" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_03" class="form-control bg-primary text-white" style="text-align: center;" value="03" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_04" class="form-control bg-primary text-white" style="text-align: center;" value="04" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_05" class="form-control bg-primary text-white" style="text-align: center;" value="05" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_06" class="form-control bg-primary text-white" style="text-align: center;" value="06" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_07" class="form-control bg-primary text-white" style="text-align: center;" value="07" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_08" class="form-control bg-primary text-white" style="text-align: center;" value="08" disabled>
+          </div>
+          <div class="col-lg-1 col-md-3">
+            <input type="text" id="up_09" class="form-control bg-primary text-white" style="text-align: center;" value="09" disabled>
+          </div>
+
+        </div>
+        <div class="row gx-1 justify-content-center p-3">
+            <div class="col-lg-1 col-md-3">
+            </div>
+            <div class="col-lg-1 col-md-3">
+            </div>
+            <div class="col-lg-1 col-md-3">
+            </div>
+            <div class="col-lg-1 col-md-3">
+                <button type="button" id="who" class="btn bg-danger text-white" onclick="from()">FROM</button>
+            </div>
+            <div class="col-lg-1 col-md-3">
+                <input type="text" id="turno" class="form-control bg-light" style="text-align: center;" value="" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+                <button type="button" id="go" class="btn bg-success text-white" onclick="to()">TO</button>
+            </div>
+            <div class="col-lg-1 col-md-3">
+            </div>
+            <div class="col-lg-1 col-md-3">
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <button type="button" id="who" class="btn bg-danger text-white" onclick="test()">test</button>
+            </div>
+          </div>
+
+          <div class="row gx-1 justify-content-center p-3">
+      
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_01" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled >
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_02" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_03" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_04" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_05" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_06" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_07" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_08" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+            <div class="col-lg-1 col-md-3">
+              <input type="text" id="down_09" class="form-control bg-warning text-dark" style="text-align: center;" value="--" disabled>
+            </div>
+  
+          </div>
+      </div>
+  </body>
+</html>
