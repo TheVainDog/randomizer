@@ -8,10 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="text/javascript" src="./functions.js"></script> 
-    <title>Posada 2021!</title>
+    <title>¡Posada 2021!</title>
   </head>
   <body>
-    
+    <audio id="box" src="box.mp3"></audio>
+    <audio id="coin" src="coin.mp3"></audio>
+    <audio id="kids" src="kids.mp3"></audio>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -24,7 +26,7 @@
             <h1>¡Posada 2021!</h1>
         </div>
         
-        <div class="row gx-1 justify-content-center p-3">
+        <div class="row gx-1 justify-content-center p-3" id="from">
       
           <div class="col-lg-1 col-md-3">
             <input type="text" id="up_01" class="form-control bg-primary text-white" style="text-align: center;" value="01" disabled>
@@ -63,20 +65,19 @@
             <div class="col-lg-1 col-md-3">
             </div>
             <div class="col-lg-1 col-md-3">
-                <button type="button" id="who" class="btn bg-danger text-white" onclick="from()">FROM</button>
+                <button type="button" id="from" class="btn bg-danger text-white" onclick="from()">FROM</button>
             </div>
             <div class="col-lg-1 col-md-3">
-                <input type="text" id="turno" class="form-control bg-light" style="text-align: center;" value="" disabled>
+                <input type="hidden" id="turno" class="form-control bg-light" style="text-align: center;" value="--" disabled>
             </div>
             <div class="col-lg-1 col-md-3">
-                <button type="button" id="go" class="btn bg-success text-white" onclick="to()">TO</button>
+                <button type="button" id="to" class="btn bg-success text-white" onclick="to()">TO</button>
             </div>
             <div class="col-lg-1 col-md-3">
             </div>
             <div class="col-lg-1 col-md-3">
             </div>
             <div class="col-lg-1 col-md-3">
-              <button type="button" id="who" class="btn bg-danger text-white" onclick="test()">test</button>
             </div>
           </div>
 
