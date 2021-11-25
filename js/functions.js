@@ -8,8 +8,8 @@ let arrTo = ['01', '02', '03', '04', '05', '06', '07', '08', '09'];
 
 let arrAux = [];
 
-let arrSoundsFrom = ['coin','correct','msok','ring','kirby'];
-let arrSoundsTo = ['fart','yoshi','ks','concha','catch'];
+let arrSoundsFrom = ['coin','correct','msok','ring','kirby','secret'];
+let arrSoundsTo = ['fart','retard','concha','gay'];
 
 let delayMax = 100;
 
@@ -49,7 +49,7 @@ async function to() {
     if (arrTo.length == 0) return;
 
     if (arrTo.length == 1) {
-        document.getElementById('fart').play();
+        document.getElementById(arrSoundsTo[Math.floor(Math.random() * arrSoundsTo.length)]).play();
         document.getElementById("down_"+fromPlayer).classList.remove('bg-warning');
         document.getElementById("down_"+fromPlayer).classList.remove('text-dark');
         document.getElementById("down_"+fromPlayer).classList.add('bg-success');
