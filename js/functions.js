@@ -15,8 +15,22 @@ let delayMax = 100;
 
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
+document.addEventListener('DOMContentLoaded', function(){
+    reset();
+}, false);
+
+function reset(){
+    document.getElementById("divTo").querySelectorAll('input[type=text]').forEach(e =>{ e.value='--'});
+}
+
 async function from() {
-    
+    document.getElementById("btnFrom").classList.remove('bg-danger');
+    document.getElementById("btnFrom").classList.remove('text-white');
+    document.getElementById("btnFrom").classList.add('btn-outline-danger');
+    document.getElementById("btnFrom").classList.add('text-red');
+    document.getElementById("btnFrom").disabled = true;
+
+
     if (arrFrom.length == 0) return;
 
     if (arrFrom.length == 1) {
@@ -25,8 +39,14 @@ async function from() {
         document.getElementById("up_"+arrFrom[0]).classList.add('bg-danger');
         fromPlayer = arrFrom[0];
         arrFrom.splice(0,1);
+        document.getElementById("bntTo").classList.remove('btn-outline-success');
+        document.getElementById("bntTo").classList.remove('text-green');
+        document.getElementById("bntTo").classList.add('btn-success');
+        document.getElementById("bntTo").classList.add('text-white');
+        document.getElementById("bntTo").disabled = false;
         return;
     }
+    
     document.getElementById("box").play();
     for (let delay = 1; delay <= delayMax; delay+=1) {
         fromIndex = Math.floor(Math.random() * arrFrom.length);
@@ -42,10 +62,23 @@ async function from() {
     document.getElementById("up_"+arrFrom[fromIndex]).classList.remove('bg-primary');
     document.getElementById("up_"+arrFrom[fromIndex]).classList.add('bg-danger');
     arrFrom.splice(fromIndex,1);
+    
+    
+    document.getElementById("bntTo").classList.remove('btn-outline-success');
+    document.getElementById("bntTo").classList.remove('text-green');
+    document.getElementById("bntTo").classList.add('btn-success');
+    document.getElementById("bntTo").classList.add('text-white');
+    document.getElementById("bntTo").disabled = false;
 }
 
 
 async function to() {
+    document.getElementById("bntTo").classList.remove('btn-success');
+    document.getElementById("bntTo").classList.remove('text-white');
+    document.getElementById("bntTo").classList.add('btn-outline-success');
+    document.getElementById("bntTo").classList.add('text-green');
+    document.getElementById("bntTo").disabled = true;
+
     if (arrTo.length == 0) return;
 
     if (arrTo.length == 1) {
@@ -84,4 +117,10 @@ async function to() {
 
     arrTo.sort();
     arrAux.sort();
+
+    document.getElementById("btnFrom").classList.remove('btn-outline-danger');
+    document.getElementById("btnFrom").classList.remove('text-red');
+    document.getElementById("btnFrom").classList.add('bg-danger');
+    document.getElementById("btnFrom").classList.add('text-white');
+    document.getElementById("btnFrom").disabled = false;
 }
